@@ -1,0 +1,36 @@
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    margin-top: 10px;
+}
+
+li{
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.bx{
+    font-size: 1.5rem;
+    color:#02c39a;
+}
+
+.footer_rights{
+    font-size: 0.9rem;
+    color: white;
+}
+
+.footer_author{
+    color: #02c39a;
+}

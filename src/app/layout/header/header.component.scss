@@ -1,0 +1,35 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        img{
+            margin-left: 20px;
+            max-width: 190px;
+            height: auto;
+        }
+    }
+
+    ul{
+        margin-right: 20px;
+        list-style: none;
+        margin-top: 70px;
+    }
+
+    li{
+        display: inline-block;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        border-radius: 5px;
+        padding: 7px 13px;
+    }
+
+    a.active, a:hover{
+        background: #ff0a54;
+        transition: 0.5s;
+    }
+}
+
