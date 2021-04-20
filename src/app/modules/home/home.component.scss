@@ -1,0 +1,29 @@
+main{
+    padding: 50px;
+    text-align: center;
+
+    img{
+        margin-top: 20px;
+        width: 450px;
+        border-radius: 10px;
+        opacity: 0.9;
+    }
+
+    .title{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    .content{
+        font-size: 1.5rem;
+    }
+
+    .content-footer{
+        color: #e91e63;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}

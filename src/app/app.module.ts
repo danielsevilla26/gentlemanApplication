@@ -8,6 +8,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { MainComponent } from './layout/main/main.component';
 import { SkeletonComponent } from './layout/skeleton/skeleton.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { YoutubeComponent } from './modules/youtube/youtube.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,21 @@ import { SkeletonComponent } from './layout/skeleton/skeleton.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    SkeletonComponent
+    SkeletonComponent,
+    YoutubeComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      //Remove # to all routes
+      provide: LocationStrategy,
+      useClass: PathLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-declare var require: any;
 
 @Component({
   selector: 'app-main',
@@ -7,7 +6,6 @@ declare var require: any;
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  public fondo = require("../../../assets/images/main.jpg");
 
   constructor() { }
 

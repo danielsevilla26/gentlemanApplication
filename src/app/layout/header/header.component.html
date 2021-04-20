@@ -3,8 +3,8 @@
         <img src="{{logo.default}}" alt="logoGS">
     </div>
     <ul>
-        <li><a href="" class="active">Inicio</a></li>
-        <li><a href="">¿Quiénes somos?</a></li>
-        <li><a href="">Videos</a></li>
+        <li><a [routerLink]="['/home']" [routerLinkActive]="['active']">Inicio</a></li>
+        <li><a [routerLink]="['/community']" [routerLinkActive]="['active']">Comunidad</a></li>
+        <li><a [routerLink]="['/youtube']" [routerLinkActive]="['active']">Canal</a></li>
     </ul>
 </nav>
