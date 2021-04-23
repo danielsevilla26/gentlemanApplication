@@ -11,6 +11,9 @@ import { CommunityRoutingModule } from 'src/app/modules/community/community-rout
   imports: [
     SharedModule,
     CommunityRoutingModule
+  ],
+  exports:[
+    SharedModule
   ]
 })
 export class CommunityModule { }

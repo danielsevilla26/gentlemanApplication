@@ -3,3 +3,11 @@
 *{
     margin: 0;
 }
+
+
+//Ciclo para animación
+@for $i from 1 through 100{
+    .animation-#{$i}{//i es la variable que se pasa
+        animation-delay: #{$i /10}s ; //Dato pasado entre 10 segundos
+    }
+}
