@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
 
-Aplicación desarrollada para mostrar información de la comunidad Gentleman Programming.
+Application created for the Gentleman Programming community.
 
 ## Development server
 
