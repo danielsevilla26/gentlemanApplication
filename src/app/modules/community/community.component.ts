@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 declare var require: any;
 
 @Component({
@@ -33,9 +34,9 @@ export class CommunityComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
-    console.log(this.links);
+    
   }
+
 }
 
 class LinkModel{
