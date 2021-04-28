@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { YoutubeRoutingModule } from 'src/app/modules/youtube/youtube-routing.module';
-import { SharedModule } from 'src/app/shared/shared.module';
-
+import { SharedModule } from '@shared/shared.module';
+import { YoutubeComponent } from '@modules/youtube/youtube.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    YoutubeComponent
+  ],
   imports: [
     SharedModule,
     YoutubeRoutingModule

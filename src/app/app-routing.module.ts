@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SkeletonComponent } from 'src/app/layout/skeleton/skeleton.component';
-import { HomeComponent } from 'src/app/modules/home/home.component';
+import { SkeletonComponent } from '@layout/skeleton/skeleton.component';
 
 const routes: Routes = [
   {
@@ -10,23 +9,23 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => 
-        import ('./modules/home/home.module').then((m) => m.HomeModule)
+        import ('@modules/home/home.module').then((m) => m.HomeModule)
       },
       {
         path: 'community',
         loadChildren: () => 
-        import ('./modules/community/community.module').then((m) => m.CommunityModule)
+        import ('@modules/community/community.module').then((m) => m.CommunityModule)
       },
       {
         path: 'youtube',
         loadChildren: () => 
-        import ('./modules/youtube/youtube.module').then((m) => m.YoutubeModule)
+        import ('@modules/youtube/youtube.module').then((m) => m.YoutubeModule)
       }
     ]
   },
   {
     path: '', redirectTo: 'home', pathMatch: 'full'
-  },//Ruta default
+  },//Default route
   {
     path: '**', redirectTo: 'home', pathMatch: 'full'
   }

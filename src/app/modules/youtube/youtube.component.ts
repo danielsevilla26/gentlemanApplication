@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { YoutubeService } from '../../data/services/youtube.service';
+import { YoutubeService } from '@data/services/youtube.service';
 
-import { ICard } from 'src/app/shared/components/card/icard.metadata';
+import { ICard } from '@shared/components/card/icard.metadata';
 
 @Component({
   selector: 'app-youtube',
@@ -19,10 +19,10 @@ public videos: ICard[] = [
     date: '2021-03-19T18:48:40Z'
   },
   {
-    id: "ytc",
-    title: 'Gentleman Programming',
-    description: 'Hola gente !! Cómo andamos ? Bienvenidos a este canal especial para programadores y gente a la que le gusta el mundo de la programación web ! Se suben ...',
-    url: 'https://yt3.ggpht.com/ytc/AAUvwnidYtpfmvRgE4bJUJ6rQw7QRdx1ydU6JnQbTspr=s240-c-k-c0xffffffff-no-rj-mo',
+    id: "NkjBZBDIzgY",
+    title: 'Hagamos una app en Angular, PT 1',
+    description: 'Buenas gente ! vamos a hacer una app en Angular, veamos buenas prácticas, formas de trabajar, herramientas, etc. Lo importante a considerar es que NADA ...',
+    url: 'https://i.ytimg.com/vi/NkjBZBDIzgY/mqdefault.jpg',
     date: '2020-09-17T16:41:51Z'
   },
   {
@@ -44,24 +44,25 @@ public videos: ICard[] = [
   constructor(private _youtubeService: YoutubeService) { }
 
   ngOnInit(): void {
-    // this.getVideos();
+    //this.getVideos();
   }
 
   private getVideos(){
     this._youtubeService.GetVideos().subscribe(
       async response =>{
+        console.log(response);
         var data = await response.items;
-        data.forEach(element => {
-          let video : ICard ={
-            id: element.id.videiId,
-            title: element.snippet.title,
-            description: element.snnipet.title,
-            url: element.snnipet.thumbnails.medium.url,
-            date: element.snnipet.publishedAt
-          }
-          this.videos.push(video);
-        });
-        console.log(data);
+        // data.forEach(element => {
+        //   let video : ICard ={
+        //     id: element.id.videiId,
+        //     title: element.snippet.title,
+        //     description: element.snnipet.title,
+        //     url: element.snnipet.thumbnails.medium.url,
+        //     date: element.snnipet.publishedAt
+        //   }
+        //   this.videos.push(video);
+        // });
+        // console.log(data);
       },
       error =>{
         console.log(error);

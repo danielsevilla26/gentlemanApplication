@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { CardComponent } from './components/card/card.component';
-import { YoutubePipe } from 'src/app/shared/pipes/youtube.pipe';
+import { YoutubePipe } from '@shared/pipes/youtube.pipe';
+import { CardComponent } from '@shared/components/card/card.component';
 
 
 
@@ -19,7 +19,7 @@ import { YoutubePipe } from 'src/app/shared/pipes/youtube.pipe';
     CommonModule,
     HttpClientModule,
     CardComponent,
-    //YoutubePipe
+    YoutubePipe
   ]
 })
 export class SharedModule { }

@@ -1,7 +1,7 @@
 <div class="sev-card" *ngIf="data">
     <div class="card__img">
         <img src="{{data.url}}" alt="">
-        <a class="card__watch-video" (click)="detailVideo(data.id)">Ver video</a>
+        <a class="card__watch-video" (click)="detailVideo(data)">Ver video</a>
     </div>
     <div class="card__body">
         <p class="card__title">{{data.title}}</p>
@@ -14,11 +14,11 @@
 
 
 <!-- Youtube Modal -->
-<div class="modal fade" id="youtubeVideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<div class="modal fade" id="youtubeVideo" tabindex="-1" aria-labelledby="youtubeVideoLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Gentleman Programming</h5>
+                <h5 class="modal-title" id="youtubeVideoLabel">{{title}}</h5>
             </div>
             <div class="modal-body">
                 <iframe width="460" height="315" [src]="videoId | youtube" title="YouTube video player" 

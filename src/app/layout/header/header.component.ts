@@ -7,7 +7,7 @@ declare var require: any;
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public logo = require("../../../assets/images/logo.png");
+  public logo = require("@assets/images/logo.png");
 
   constructor() { }
 
