@@ -44,6 +44,7 @@ public videos: ICard[] = [
   constructor(private _youtubeService: YoutubeService) { }
 
   ngOnInit(): void {
+
     //this.getVideos();
   }
 
@@ -51,7 +52,7 @@ public videos: ICard[] = [
     this._youtubeService.GetVideos().subscribe(
       async response =>{
         console.log(response);
-        var data = await response.items;
+        
         // data.forEach(element => {
         //   let video : ICard ={
         //     id: element.id.videiId,

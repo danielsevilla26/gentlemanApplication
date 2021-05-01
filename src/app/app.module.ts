@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from '@shared/shared.module';
 import * as fromComponents from '@layout/index';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { CoreModule } from '@app/core/core.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
   imports: [
     BrowserModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [
     {

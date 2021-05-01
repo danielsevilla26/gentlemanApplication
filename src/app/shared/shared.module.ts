@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { YoutubePipe } from '@shared/pipes/youtube.pipe';
 import { CardComponent } from '@shared/components/card/card.component';
+import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 
 
 
 @NgModule({
   declarations: [
     CardComponent,
-    YoutubePipe
+    YoutubePipe,
+    LoadingScreenComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { CardComponent } from '@shared/components/card/card.component';
     CommonModule,
     HttpClientModule,
     CardComponent,
-    YoutubePipe
+    YoutubePipe,
+    LoadingScreenComponent
   ]
 })
 export class SharedModule { }
