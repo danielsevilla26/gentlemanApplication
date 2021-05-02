@@ -1,41 +1,34 @@
-@import '../../../assets/variables.scss';
+@import "../../../assets/variables.scss";
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-.contenedor{
+.contenedor {
     display: grid;
     height: 100vh;
     grid-template-columns: 100%;
     grid-template-rows: 0.2fr 1fr 0.16fr;
-    grid-template-areas: "header header"
-    "main main"
-    "footer footer";
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
 }
 
-header{
+header {
     grid-area: header;
-    background: linear-gradient(
-        40deg,
-        #062726 20%,
-        #102b3f 80%
-    );
+    background: linear-gradient(40deg, #062726 20%, #102b3f 80%);
 }
 
-main{
-    background:white;
+main {
+    background: white;
     grid-area: main;
 }
 
-footer{
-    background: linear-gradient(
-        40deg,
-        #102b3f 0%,
-        #062726 100%
-    );
+footer {
+    background: linear-gradient(40deg, #102b3f 0%, #062726 100%);
     grid-area: footer;
 }

@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { ICard } from '@shared/components/card/icard.metadata';
-declare var $;
 
 @Component({
   selector: 'app-card',
@@ -8,25 +7,26 @@ declare var $;
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-@Input() data: ICard;
-public videoId: string;
-public title: string;
+  @Input() data: ICard;
+
+  public display = 'none';
+  public videoId: string;
+  public title: string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public detailVideo(video: ICard){
+  public detailVideo(video: ICard) {
     this.videoId = video.id;
     this.title = video.title;
-    console.log(this.videoId);
-    console.log(this.title);
-    $('#youtubeVideo').modal();
+    this.display = 'block';
   }
 
-  public closeModal(){
-    this.videoId = null;
-    this.title = null;
-    $('#youtubeVideo').modal('hide');
+  public closeModal() {
+    this.videoId = '';
+    this.title = '';
+    this.display = 'none';
   }
 }

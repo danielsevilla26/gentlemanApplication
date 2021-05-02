@@ -14,20 +14,19 @@
 
 
 <!-- Youtube Modal -->
-<div class="modal fade" id="youtubeVideo" tabindex="-1" aria-labelledby="youtubeVideoLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="youtubeVideoLabel">{{title}}</h5>
-            </div>
-            <div class="modal-body">
-                <iframe width="460" height="315" [src]="videoId | youtube" title="YouTube video player" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" (click)="closeModal()">Cerrar</button>
-            </div>
+<div #youtubeModal class="modal" [ngStyle]="{'display': display}">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5>{{title}}</h5>
+        </div>
+        <div class="modal-body">
+            <iframe width="460" height="315" [src]="videoId | youtube" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="closeModal()">Cerrar</button>
         </div>
     </div>
 </div>

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { YoutubePipe } from '@shared/pipes/youtube.pipe';
 import { CardComponent } from '@shared/components/card/card.component';
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
+import { SearchComponent } from '@shared/components/search/search.component';
 
 
 
@@ -11,7 +12,8 @@ import { LoadingScreenComponent } from './components/loading-screen/loading-scre
   declarations: [
     CardComponent,
     YoutubePipe,
-    LoadingScreenComponent
+    LoadingScreenComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,9 @@ import { LoadingScreenComponent } from './components/loading-screen/loading-scre
     HttpClientModule,
     CardComponent,
     YoutubePipe,
-    LoadingScreenComponent
+    LoadingScreenComponent,
+    SearchComponent,
+    YoutubePipe
   ]
 })
 export class SharedModule { }

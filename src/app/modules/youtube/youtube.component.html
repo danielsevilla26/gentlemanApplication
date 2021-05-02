@@ -1,3 +1,7 @@
 <div class="sev-container">
-    <app-card [data]="video" *ngFor="let video of videos"></app-card>
+    <app-search (search)="searchVideo($event)"></app-search>
+    <div class="videos">
+        <app-card [data]="video" *ngFor="let video of videos">
+        </app-card>
+    </div>
 </div>

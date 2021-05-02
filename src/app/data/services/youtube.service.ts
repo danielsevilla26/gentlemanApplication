@@ -20,6 +20,19 @@ export class YoutubeService {
       .set('key', this.api_key);
 
     return this._http.get(`${this.url}/search`, { params: params })
-      .pipe(map(resp => resp));
+      .pipe(map((resp: any) => resp.items));
+  }
+
+  public searchVideo(query: string){
+    const params = new HttpParams()
+      .set('q', query)
+      .set('part', 'snippet')
+      .set('channelId', this.channel)
+      .set('type', 'video')
+      .set('maxResults', '10')
+      .set('key', this.api_key);
+
+      return this._http.get(`${this.url}/search`, { params: params })
+      .pipe(map((resp: any) => resp.items));
   }
 }

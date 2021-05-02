@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,12 +6,12 @@
     padding: 15px 30px 10px 30px;
 }
 
-#carouselExampleCaptions{
+#carouselExampleCaptions {
     width: 100%;
     height: auto;
 }
 
-.left-container{
+.left-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -20,7 +20,7 @@
     text-align: center;
 }
 
-.title{
+.title {
     display: inline-block;
     color: #000;
     background: #fff;
@@ -30,8 +30,8 @@
     font-weight: bold;
 }
 
-.title::before{
-    content: '';
+.title::before {
+    content: "";
     display: block;
     width: 100%;
     height: 100%;
@@ -42,30 +42,30 @@
     left: 0;
 }
 
-.paragraph-1{
+.paragraph-1 {
     font-size: 1.1rem;
     font-weight: bold;
 }
 
-a{
+a {
     text-decoration: none;
     color: #ad1457;
 }
 
-.paragraph-2{
+.paragraph-2 {
     font-size: 2rem;
     font-weight: bold;
 }
 
-.bx-fade-right{
+.bx-fade-right {
     margin-bottom: 9px;
 }
 
-.carousel-item{
+.carousel-item {
     background: black;
     width: 600px;
     height: 350px;
-    img{
+    img {
         margin: 35px;
         margin-left: 340px;
         max-width: 200px;
@@ -75,12 +75,12 @@ a{
     }
 }
 
-.bx{
+.bx {
     font-size: 2.5rem;
     color: #ad1457;
 }
 
-.carousel-caption{
+.carousel-caption {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -92,32 +92,28 @@ a{
     color: white;
 }
 
-.carousel-title{
+.carousel-title {
     font-size: 1.8rem;
     font-weight: bold;
 }
 
-.carousel-subtitle{
+.carousel-subtitle {
     font-size: 1.3rem;
 }
 
-	
 img:hover {
     filter: saturate(400%);
 }
 
 #carouselExampleCaptions:hover img {
-    -webkit-transform:scale(1.1);
-    transform:scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
     transition-duration: 1s;
 }
 
 #carouselExampleCaptions {
-    overflow:hidden;
+    overflow: hidden;
 }
-
-
-
 
 // .wrapper{
 //     padding: 1rem;//Espaciado de sidebar
