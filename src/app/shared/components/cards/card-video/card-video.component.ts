@@ -1,13 +1,13 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { ICard } from '@shared/components/card/icard.metadata';
+import { IVideo } from '@app/shared/components/cards/card-video/iVideo.metadata';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: 'app-card-video',
+  templateUrl: './card-video.component.html',
+  styleUrls: ['./card-video.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() data: ICard;
+  @Input() data: IVideo;
 
   public display = 'none';
   public videoId: string;
@@ -18,7 +18,7 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public detailVideo(video: ICard) {
+  public detailVideo(video: IVideo) {
     this.videoId = video.id;
     this.title = video.title;
     this.display = 'block';

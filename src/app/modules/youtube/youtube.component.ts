@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { YoutubeService } from '@data/services/youtube.service';
 
-import { ICard } from '@shared/components/card/icard.metadata';
+import { IVideo } from '@app/shared/components/cards/card-video/iVideo.metadata';
 
 @Component({
   selector: 'app-youtube',
@@ -9,8 +9,8 @@ import { ICard } from '@shared/components/card/icard.metadata';
   styleUrls: ['./youtube.component.scss']
 })
 export class YoutubeComponent implements OnInit {
-  public videos: ICard[] = [];
-  public videoss: ICard[] = [
+  public videos: IVideo[] = [];
+  public videoss: IVideo[] = [
     {
       id: "9_8Biy10kW0",
       title: 'Programando de 0 !',
@@ -58,30 +58,26 @@ export class YoutubeComponent implements OnInit {
   constructor(private _youtubeService: YoutubeService) { }
 
   ngOnInit(): void {
-    //this.getVideos();
+    this.getVideos();
   }
 
   private getVideos() {
     this._youtubeService.GetVideos().subscribe(
-      async response => {
-        console.log(response);
-        var data = await response;
-        // data.forEach(element => {
-        //   let video : ICard ={
-        //     id: element.id.videiId,
-        //     title: element.snippet.title,
-        //     description: element.snnipet.title,
-        //     url: element.snnipet.thumbnails.medium.url,
-        //     date: element.snnipet.publishedAt
-        //   }
-        //   this.videos.push(video);
-        // });
-        // console.log(data);
-      },
-      error => {
-        console.log(error);
+      (items: any) => {
+        this.videos = items.map(
+          item => {
+            console.log(item);
+            return {
+              title: item.snippet.title,
+              id: item.id.videoId,
+              description: item.snippet.description,
+              date: new Date(item.snippet.publishedAt),
+              url: item.snippet.thumbnails.medium.url
+            }
+          }
+        )
       }
-    );
+    )
   }
 
   public searchVideo(inputValue: string) {
@@ -89,7 +85,7 @@ export class YoutubeComponent implements OnInit {
       (items: any) => {
         this.videos = items.map(
           item => {
-
+            console.log(item);
             return {
               title: item.snippet.title,
               id: item.id.videoId,

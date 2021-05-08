@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IImage } from '@app/shared/components/cards/card-image/iImage.metadata';
 
 declare var require: any;
 
@@ -8,38 +9,33 @@ declare var require: any;
   styleUrls: ['./community.component.scss']
 })
 export class CommunityComponent implements OnInit {
-  public welcomeImg = require("../../../assets/images/welcome.png");
-  public sharingImg = require("../../../assets/images/sharing.png");
-  public channelImg = require("../../../assets/images/channel.png");
-  public learningImg = require("../../../assets/images/learning.png");
-
-  public links: Array<LinkModel> = [
+  public images: IImage[] = [
     {
-      link: 'https://www.youtube.com/channel/UCCsXrAdp6S4k2UxJm-fKN-g/featured',
-      icon: '<i class="uil uil-youtube"></i>'
+      title: "Te damos la bienvenida",
+      description: "Aquí podrás presentarte y obtendrás información general de la comunidad.",
+      url: "/assets/images/welcome.png"
     },
     {
-      link: 'https://github.com/danielsevilla26',
-      icon: '<i class="uil uil-github-alt"></i>'
+      title: "Comparte lo que quieras",
+      description: "Recuerda apoyar a la comunidad compartiendo información, sin olvidar los memes ;)",
+      url: "/assets/images/sharing.png"
     },
     {
-      link: 'mailto:sevillakristell@gmail.com',
-      icon: '<i class="uil uil-envelope"></i>'
+      title: "Aprende constantemente",
+      description: "En este apartado encuentra diferentes recursos de programación.",
+      url: "/assets/images/learning.png"
     },
     {
-      link: 'https://www.linkedin.com/in/danielsevilla565aa6115/',
-      icon: '<i class="uil uil-linkedin-alt"></i>'
+      title: "Canales de voz",
+      description: "En el apartado final podrás ver los diferentes canales de comunicación",
+      url: "/assets/images/channel.png"
     }
-  ];
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
-    
+    console.log(this.images);
   }
 
-}
-
-class LinkModel{
-  link: string;
-  icon: string;
 }

@@ -1,14 +1,10 @@
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
     text-align: center;
 }
 
 ul {
     list-style: none;
-    margin-top: 10px;
+    padding-top: 5px;
 }
 
 li {
@@ -18,17 +14,18 @@ li {
 a {
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding-right: 15px;
 }
 
 .bx {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #f48fb1;
 }
 
 .footer_rights {
     font-size: 0.9rem;
     color: white;
+    margin-top: -10px;
 }
 
 .footer_author {

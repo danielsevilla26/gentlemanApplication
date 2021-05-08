@@ -1,7 +1,5 @@
-export interface ICard{
-    id: string;
+export interface IImage{
     title: string;
     description: string;
-    date: string;
     url: string;
 }

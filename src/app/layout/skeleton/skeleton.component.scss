@@ -3,15 +3,20 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
     font-family: "Poppins", sans-serif;
+    background-image: url("/assets/images/main.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-height: 100%;
 }
 
 .contenedor {
+    min-height: 100vh;
     display: grid;
-    height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 0.2fr 1fr 0.16fr;
+    grid-template-rows: 10% 80% 10%;
     grid-template-areas:
         "header header"
         "main main"
@@ -20,15 +25,14 @@
 
 header {
     grid-area: header;
-    background: linear-gradient(40deg, #062726 20%, #102b3f 80%);
 }
 
 main {
-    background: white;
     grid-area: main;
 }
 
 footer {
-    background: linear-gradient(40deg, #102b3f 0%, #062726 100%);
+    bottom: 0px;
+    margin-top: auto;
     grid-area: footer;
 }

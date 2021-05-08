@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { YoutubePipe } from '@shared/pipes/youtube.pipe';
-import { CardComponent } from '@shared/components/card/card.component';
-import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
+import { CardComponent } from '@app/shared/components/cards/card-video/card-video.component';
+import { LoadingScreenComponent } from '@shared/components/loading-screen/loading-screen.component';
 import { SearchComponent } from '@shared/components/search/search.component';
+import { CardImageComponent } from '@shared/components/cards/card-image/card-image.component';
 
 
 
@@ -13,7 +14,8 @@ import { SearchComponent } from '@shared/components/search/search.component';
     CardComponent,
     YoutubePipe,
     LoadingScreenComponent,
-    SearchComponent
+    SearchComponent,
+    CardImageComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { SearchComponent } from '@shared/components/search/search.component';
     YoutubePipe,
     LoadingScreenComponent,
     SearchComponent,
-    YoutubePipe
+    YoutubePipe,
+    CardImageComponent
   ]
 })
 export class SharedModule { }
