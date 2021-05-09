@@ -66,7 +66,6 @@ export class YoutubeComponent implements OnInit {
       (items: any) => {
         this.videos = items.map(
           item => {
-            console.log(item);
             return {
               title: item.snippet.title,
               id: item.id.videoId,
@@ -85,7 +84,6 @@ export class YoutubeComponent implements OnInit {
       (items: any) => {
         this.videos = items.map(
           item => {
-            console.log(item);
             return {
               title: item.snippet.title,
               id: item.id.videoId,

@@ -12,7 +12,6 @@ export class LoadingScreenComponent {
   public isLoading$ = this._loadingService.isLoading$;
 
   constructor(private _loadingService: LoadingService) { 
-    console.log(this.isLoading$);
   }
 
 }
