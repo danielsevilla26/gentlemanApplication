@@ -1,19 +1,7 @@
-h5
-{
-  font-size:1.2rem;
-  font-weight:700;
-}
-
-p
-{
-  margin-top: 5px;
-  font-size: 0.9rem;
-}
-
 .property-card
 {
-  margin-right: 2rem;
-  height:18em;
+  margin: 2rem;
+  height:15em;
   width:14em;
   display:-webkit-box;
   display:-ms-flexbox;
@@ -34,7 +22,7 @@ p
 .property-description
 {
   background-color: #FAFAFC;
-  height:12em;
+  height: 75%;
   width:14em;
   position:absolute;
   bottom:0em;
@@ -45,17 +33,54 @@ p
   text-align:center;
 }
 
+.property-social-icons
+{
+  width: 100%;
+  height: 30px;
+  position:absolute;
+  bottom: 10px;
+}
+
 .property-card:hover .property-description
 {
   height:0em;
   padding:0px 1em;
   cursor: pointer;
 }
-.property-card:hover .property-image
-{
-  height:18em;
-}
 
 img{
     cursor: pointer;
 }
+
+h5
+{
+  font-size:1.2rem;
+  font-weight:700;
+}
+
+p
+{
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+ul{
+  width: 80%;
+  height: 100%;
+  display: flex;
+}
+
+li{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  left: 0;
+}
+
+a{
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #f48fb1;
+  font-weight: bolder;
+}
+

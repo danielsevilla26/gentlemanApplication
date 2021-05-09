@@ -3,13 +3,21 @@
         <p class="title">Comunidad Discord</p>
 
         <p class="paragraph">
-            Nuestra comunidad está dedicada a aquellas personas que buscan recursos, canales, eventos,
+            La comunidad está dedicada a aquellas personas que buscan recursos, eventos,
             ideas, ejercicios y demás sobre programación.
             Gentleman Programming se encuentra en <a
                 href="https://discord.com/channels/769863833996754944/832337780545552435/832338699664621588"
                 target="_blank">Discord</a>
             donde puedes acceder de forma gratuita.
+            <br/><br>
+            Con ayuda de nuestro mentor y creador de la comunidad, <a 
+            href="https://www.linkedin.com/in/alanbuscaglia/" target="_blank">
+                Alan Buscaglia, 
+            </a>
+            podrás resolver cualquier duda que tengas, además de aprovechar de su amplio conocimiento.
         </p>
+        <br/>
+        <app-card-image [data]="mentor" *ngFor="let mentor of mentors"></app-card-image>
     </div>
     <div class="right-container animate__animated animate__fadeInDown animation-5">
         <h3>Primeros pasos dentro de la comunidad:</h3>

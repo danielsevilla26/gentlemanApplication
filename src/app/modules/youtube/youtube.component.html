@@ -4,9 +4,10 @@
     </div>
     <div class="videos">
         <app-card-video [data]="video" *ngFor="let video of videos"></app-card-video>
-        
-        <div *ngIf="videos.length < 1">
-            <h3>¡No se encontraron resultados, intenta nuevamente!</h3>    
+
+        <div *ngIf="sinVideos != null">
+            <br/><br/><br/>
+            <h3>{{sinVideos}}</h3>    
         </div>
     </div>
 </div>

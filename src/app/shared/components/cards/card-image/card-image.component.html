@@ -4,4 +4,11 @@
         <h5> {{data.title}} </h5>
         <p>{{data.description}}</p>
     </div>
+    <div class="property-social-icons">
+        <ul>
+            <li *ngFor="let icon of data.icons">
+                <a href="{{icon.url}}" target="_blank"><i [ngClass]="icon.description"></i></a>
+            </li>
+        </ul>
+    </div>
 </div>
